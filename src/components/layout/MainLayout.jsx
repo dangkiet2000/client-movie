@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { Outlet } from "react-router-dom";
+import GlobalLoading from "../common/GlobalLoading";
 
 /*
  * main component: The component used for the root node. Either a string to use a HTML element or a component.
@@ -18,6 +19,7 @@ const MainLayout = () => {
     return (
         <>
             {/* loading global*/}
+            <GlobalLoading />
             {/* loading global*/}
 
             {/*login modal */}
