@@ -1,7 +1,10 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { Outlet } from "react-router-dom";
+import AuthModal from "../common/AuthModal";
+import Footer from "../common/Footer";
 import GlobalLoading from "../common/GlobalLoading";
+import Topbar from "../common/Topbar";
 
 /*
  * main component: The component used for the root node. Either a string to use a HTML element or a component.
@@ -23,10 +26,12 @@ const MainLayout = () => {
             {/* loading global*/}
 
             {/*login modal */}
+            <AuthModal />
             {/*login modal */}
 
             <Box display="flex">
                 {/*header */}
+                <Topbar />
                 {/*header */}
 
                 {/*main */}
@@ -42,6 +47,7 @@ const MainLayout = () => {
             </Box>
 
             {/* Footer */}
+            <Footer />
             {/* Footer */}
         </>
     );

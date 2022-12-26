@@ -13,6 +13,7 @@ const PageWrapper = ({ children, state }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        window.scrollTo(0, 0); // * When app state change (from home state => search state) => Go to top of screen => UX
         dispatch(setAppState(state));
     }, [state, dispatch]);
 

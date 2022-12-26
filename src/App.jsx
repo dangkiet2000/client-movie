@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
 import routes from "./routes/routes";
 import PageWrapper from "./components/common/PageWrapper";
+import "react-toastify/dist/ReactToastify.css";
 
 /*  
     ! Note: Là Muốn inside cái Route MainLayout có thể render các Routes khác thì phải có Outlet ở MainLayout Component
@@ -23,7 +24,7 @@ function App() {
         <ThemeProvider theme={themeConfigs.custom({ mode: themeMode })}>
             {/*config toastify*/}
             <ToastContainer
-                position="bottom"
+                position="bottom-left"
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
